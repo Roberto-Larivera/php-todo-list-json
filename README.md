@@ -14,3 +14,7 @@ Solo a questo punto sarà utile passare alla lettura della lista da un file JSON
 
 ## Bonus
 Mostrare lo stato del task → se completato, barrare il testo
+
+## Version
+5. Commit: Creato html + css da ex progetto: vue-todolist
+    - link: "https://github.com/Roberto-Larivera/vue-todolist"

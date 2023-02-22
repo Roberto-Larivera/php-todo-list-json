@@ -4,20 +4,23 @@ createApp({
     data(){
         return{
             apiUrl : './php/api.php',
-            message : 'Message da ricevere',
+            listTodoApi : [],
         }
     },
     methods: {
         
     },
     created() {
-        console.log(axios)
         axios
             .get(this.apiUrl)
             .then((response) => {
-                console.log(response);
-                this.message = response;
+                this.listTodoApi = response.data.data;
+                console.log(response.data.data);
+                
             });
+    },
+    mounted() {
+        console.log(this.listTodoApi);
     },
 }).mount('#app');
 
