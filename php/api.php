@@ -1,36 +1,16 @@
 <?php
 
-$message = 'Ciao la tua Api viene chiamata correttamente';
+$contentDatabase =  file_get_contents('../database/database.json');
+$contentDecoded = json_decode($contentDatabase, true);
 
-$message = [
-    [
-        "first_name"=> "Mario",
-        "last_name"=> "Rossi",
-        "email"=> "mario.rossi@api.com"
-    ],
-    [
-        "first_name"=> "Giuseppe",
-        "last_name"=> "Verdi",
-        "email"=> "giuseppe.verdi@api.com"
-    ],
-    [
-        "first_name"=> "Lidia",
-        "last_name"=> "Bianchi",
-        "email"=> "lidia.bianchi@api.com"
-    ],
-    [
-        "first_name"=> "Francesca",
-        "last_name"=> "Gialli",
-        "email"=> "francesca.gialli@api.com"
-    ],
-    [
-        "first_name"=> "Enzo",
-        "last_name"=> "Blu",
-        "email"=> "enzo.blu@api.com"
-    ]
-    ];
+$response = [
+    'success' => true,
+    'message' => 'ok',
+    'code' => 200,
+    'data' => $contentDecoded
+];
 
-$jsonMessage = json_encode($message);
+$jsonMessage = json_encode($response);
 
 header('content-type: application/json');
 
