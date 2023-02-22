@@ -3,6 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 } */
+body{
+    font-family: 'Lato', sans-serif;
+}
+header h1{
+    font-weight:300 ;
+}
 .card .list-group span,
 .card .list-group i,
 .card h5 i{
@@ -12,9 +18,12 @@
     text-decoration: line-through;
     color: lightgray;
 }
-.card h5 i{
+.card span{
     color: black;
 }
-.card h5 i:hover {
+.card span i{
+    color: black;
+}
+.card span i:hover {
     color: #0d6efd;
 }
