@@ -46,5 +46,6 @@ Anche oggi, nello svolgere l'esercizio seguite un approccio graduale.
 
 ## Versione
 - Commit 8: Creazione file script per database + databaseBackup;
-- Commit 11: Completato script 'create' => 'create.php'. Utilizzato per aggiungere un nuovo todo dentro il database per poi far tornare come risposta la conferma di avvenuta creazione e nel 'data' il riferimento del todo inserito.
-- Commit 13: Completato script 'upgradeTodo' => 'upgrade.php'. Utilizzato per modificare il valore del toogle (done) del todo nel database per poi far tonare una risposta di avvenuta modifica e nel 'data' il riferimento del todo modificato.
+- Commit 11: Completato script 'create' => 'create.php'. Utilizzato per aggiungere un nuovo todo dentro il database per poi far tornare come risposta la conferma di avvenuta creazione e nel 'data' il riferimento del todo inserito;
+- Commit 13: Completato script 'upgrade' => 'upgrade.php'. Utilizzato per modificare il valore del toogle (done) del todo nel database per poi far tonare una risposta di avvenuta modifica e nel 'data' il riferimento del todo modificato;
+- Commit 15: Completato script 'delete' => 'delete.php'. Utilizzato per eliminare il todo nel database per poi far tonare una risposta di avvenuta eliminazione e nel 'data' il riferimento del todo eliminato;

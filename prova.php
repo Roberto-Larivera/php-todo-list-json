@@ -5,7 +5,7 @@ $contentDecoded = json_decode($contentDatabase, true);
 var_dump($contentDecoded);
 
 $upgradeTodo = [
-    'todo' => 'PHP',
+    'todo' => 'HTML',
     'done' => filter_var('true', FILTER_VALIDATE_BOOLEAN),
 ];
 echo 'qui giu <br>';
@@ -13,10 +13,13 @@ foreach($contentDecoded as $index => $todo){
     if ($todo['todo'] == $upgradeTodo['todo']){
         echo 'trovato';
         echo $todo['todo'];
-        echo $todo['done'];
+        unset($contentDecoded[$index]);
+        unset($todo);
+        echo $todo['todo'];
+        //echo $todo['done'];
         //$todo['done'] = !$todo['done'];
-        $contentDecoded[$index]['done'] = !$contentDecoded[$index]['done'];
-        echo $todo['done'];
+        //$contentDecoded[$index]['done'] = !$contentDecoded[$index]['done'];
+        //echo $todo['done'];
 
 
     };

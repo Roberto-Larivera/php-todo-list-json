@@ -1,1 +1,30 @@
-[{"todo":"HTML","done":true},{"todo":"CSS","done":true},{"todo":"Responsive design","done":true},{"todo":"Javascript","done":true},{"todo":"PHP","done":false},{"todo":"Laravel","done":false},{"todo":"Axios","done":false}]
+[
+    {
+        "todo": "HTML",
+        "done": true
+    },
+    {
+        "todo": "CSS",
+        "done": true
+    },
+    {
+        "todo": "Responsive design",
+        "done": true
+    },
+    {
+        "todo": "Javascript",
+        "done": true
+    },
+    {
+        "todo": "PHP",
+        "done": false
+    },
+    {
+        "todo": "Laravel",
+        "done": false
+    },
+    {
+        "todo": "Axios",
+        "done": false
+    }
+]

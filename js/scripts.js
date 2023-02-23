@@ -27,6 +27,7 @@ createApp({
         postCreateApi(){
             axios
                 .post(this.createUrl, {
+                    reason: 'Create todo',
                     newTodo: this.newTodoForm
                 },{
                     headers:{
@@ -39,7 +40,7 @@ createApp({
                     this.getReadApi();
                 });
         },
-        postUpgradeDone(item){
+        postUpgradeDoneApi(item){
             axios
                 .post(this.upgradeUrl, {
                     reason: 'Upgrade done',
@@ -53,7 +54,22 @@ createApp({
                     console.log(response.data);
                     this.getReadApi();
                 });
-        }
+        },
+        postDeleteApi(item){
+            axios
+                .post(this.deleteUrl, {
+                    reason: 'Delete todo',
+                    deleteTodo: item
+                },{
+                    headers:{
+                        'Content-Type': 'multipart/form-data',
+                    }
+                })
+                .then((response) => {
+                    console.log(response.data);
+                    this.getReadApi();
+                });
+        },
     },
     created() {
         this.getReadApi()
