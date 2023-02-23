@@ -50,3 +50,5 @@ Anche oggi, nello svolgere l'esercizio seguite un approccio graduale.
 - Commit 13: Completato script 'upgrade' => 'upgrade.php'. Utilizzato per modificare il valore del toogle (done) del todo nel database per poi far tonare una risposta di avvenuta modifica e nel 'data' il riferimento del todo modificato;
 - Commit 15: Completato script 'delete' => 'delete.php'. Utilizzato per eliminare il todo nel database per poi far tonare una risposta di avvenuta eliminazione e nel 'data' il riferimento del todo eliminato;
 - Commit 16 / 17: Aggiunta ricerca tramite index scripts 'upgrade' & 'delete'. Aggiunte validazioni di alcuni dati. Aggiunta di messaggio di risposta in caso la richiesta non è andata a buon fine.
+- Comit 20 / 21: Aggiunte Validazioni, modificato il responsive + Aggiunte di messaggi di errore client;
+- Comit 22: Aggiornamento Database + scrpt per il ripristino del database da backup. 
