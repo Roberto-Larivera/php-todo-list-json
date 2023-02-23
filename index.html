@@ -63,8 +63,8 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-center"
                                     v-for="(item, index) in listTodoApi">
                                     <span :class="(item.done == true) ? 'done-completed' : '' "
-                                        @click="postUpgradeDoneApi(item)">{{item.todo}}</span>
-                                    <i @click="postDeleteApi(item)" class="fa-solid fa-xmark"></i>
+                                        @click="postUpgradeDoneApi(item, index)">{{item.todo}}</span>
+                                    <i @click="postDeleteApi(item , index)" class="fa-solid fa-xmark"></i>
                                 </li>
 
                             </ul>

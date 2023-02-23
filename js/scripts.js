@@ -40,10 +40,11 @@ createApp({
                     this.getReadApi();
                 });
         },
-        postUpgradeDoneApi(item){
+        postUpgradeDoneApi(item, index){
             axios
                 .post(this.upgradeUrl, {
                     reason: 'Upgrade done',
+                    upgradeTodoIndex:index,
                     upgradeTodo: item
                 },{
                     headers:{
@@ -55,10 +56,11 @@ createApp({
                     this.getReadApi();
                 });
         },
-        postDeleteApi(item){
+        postDeleteApi(item, index){
             axios
                 .post(this.deleteUrl, {
                     reason: 'Delete todo',
+                    deleteTodoIndex:index,
                     deleteTodo: item
                 },{
                     headers:{
