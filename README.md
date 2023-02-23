@@ -20,7 +20,7 @@ Solo a questo punto sarà utile passare alla lettura della lista da un file JSON
 Mostrare lo stato del task → se completato, barrare il testo
 
 ## Versione
-5. Commit: Creato html + css da ex progetto: vue-todolist
+- Commit 5: Creato html + css da ex progetto: vue-todolist
     - link: "https://github.com/Roberto-Larivera/vue-todolist"
 
 <br>
@@ -45,4 +45,6 @@ Anche oggi, nello svolgere l'esercizio seguite un approccio graduale.
 3. Abilitare l'eliminazione di un task
 
 ## Versione
-...
+- Commit 8: Creazione file script per database + databaseBackup;
+- Commit 11: Completato script 'create' => 'create.php'. Utilizzato per aggiungere un nuovo todo dentro il database per poi far tornare come risposta la conferma di avvenuta creazione e nel 'data' il riferimento del todo inserito.
+- Commit 13: Completato script 'upgradeTodo' => 'upgrade.php'. Utilizzato per modificare il valore del toogle (done) del todo nel database per poi far tonare una risposta di avvenuta modifica e nel 'data' il riferimento del todo modificato.
