@@ -3,7 +3,10 @@ console.log('int ok')
 createApp({
     data(){
         return{
-            apiUrl : './php/api.php',
+            readUrl : './php/read.php',
+            createUrl : './php/create.php',
+            upgradeUrl : './php/upgrade.php',
+            deleteUrl : './php/delete.php',
             listTodoApi : [],
         }
     },
@@ -12,7 +15,7 @@ createApp({
     },
     created() {
         axios
-            .get(this.apiUrl)
+            .get(this.readUrl)
             .then((response) => {
                 this.listTodoApi = response.data.data;
                 console.log(response.data.data);

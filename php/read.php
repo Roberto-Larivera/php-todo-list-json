@@ -2,7 +2,6 @@
 
 $contentDatabase =  file_get_contents('../database/database.json');
 $contentDecoded = json_decode($contentDatabase, true);
-
 $response = [
     'success' => true,
     'message' => 'ok',
