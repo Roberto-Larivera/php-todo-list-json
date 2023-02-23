@@ -36,18 +36,23 @@
                 <div class="row justify-content-center pb-5">
 
                     <div class="col-6">
-                        <form :action="createUrl" method="POST">
+                        <form :action="createUrl" method="POST" @submit.prevent="postCreateApi()">
                             <div class="row row-cols-1 row-cols-md-2 justify-content-center">
                                 <div class="col col-md-8 d-flex justify-content-start mb-2">
-                                    <input id="inpu_text-one" class="form-control" type="text" name="new_task"
-                                        placeholder="Nuova Task" required minlength="3">
+                                    <input id="inpu_text-one" 
+                                        class="form-control" 
+                                        type="text" 
+                                        name="new_task"
+                                        placeholder="Nuova Task" 
+                                        required 
+                                        minlength="3" 
+                                        v-model="newTodoForm.textTodo">
                                 </div>
                                 <div class="col-6 col-md-4 d-flex justify-content-end mb-2">
-                                    <button class="btn btn-outline-success">Aggiungi</button>
+                                    <button type="submit" class="btn btn-outline-success">Aggiungi</button>
                                 </div>
                             </div>
                         </form>
-
                     </div>
                 </div>
 

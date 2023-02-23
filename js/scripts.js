@@ -8,10 +8,28 @@ createApp({
             upgradeUrl : './php/upgrade.php',
             deleteUrl : './php/delete.php',
             listTodoApi : [],
-        }
+            newTodoForm : {
+                textTodo : '',
+                doneTodo : false
+            },
+        };
     },
     methods: {
-        
+        postCreateApi(){
+            console.log(this.newTodoForm);
+            axios
+                .post(this.createUrl, {
+                    newTodo: this.newTodoForm
+                },{
+                    headers:{
+                        'Content-Type': 'multipart/form-data',
+                    }
+                })
+                .then((response) => {
+                    console.log(response.data);
+                    
+                });
+        }
     },
     created() {
         axios
