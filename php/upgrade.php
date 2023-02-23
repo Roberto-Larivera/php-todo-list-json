@@ -11,7 +11,7 @@ $upgradeTodo = [
     'done' => filter_var(($_POST['upgradeTodo']['done'] ?? null), FILTER_VALIDATE_BOOLEAN),
 ];
 
-if ($_POST['upgradeTodoIndex'] !== null && $contentDecoded[$upgradeTodoIndex]['todo'] == $upgradeTodo['todo']) {
+if ($upgradeTodoIndex !== null && $contentDecoded[$upgradeTodoIndex]['todo'] == $upgradeTodo['todo']) {
 
     $contentDecoded[$upgradeTodoIndex]['done'] = !$contentDecoded[$upgradeTodoIndex]['done'];
     $todoUpgrade = $contentDecoded[$upgradeTodoIndex]['todo'];

@@ -8,7 +8,7 @@ $responseBol = false;
 $deleteTodoIndex = $_POST['deleteTodoIndex'] ?? null;
 $deleteTodo = [
     'todo' => ($_POST['deleteTodo']['todo'] ?? null),
-    'done' => filter_var(($_POST['deleteTodo']['done']), FILTER_VALIDATE_BOOLEAN),
+    'done' => filter_var(($_POST['deleteTodo']['done']?? null), FILTER_VALIDATE_BOOLEAN),
 ];
 if($contentDecode !== null && $contentDecode != []){
     if ($deleteTodoIndex !== null && $contentDecode[$deleteTodoIndex]['todo'] == $deleteTodo['todo']) {
@@ -45,7 +45,7 @@ if ($responseBol) {
 } else {
     $response = [
         'success' => true,
-        'message' => 'Error delete todo'. ' - '.$messageError?? 'Data not found',
+        'message' => 'Error delete todo'. ' - '.($messageError?? 'Data not found'),
         'code' => 400
     ];
 }
