@@ -9,7 +9,7 @@
     },
     {
         "todo": "Responsive design",
-        "done": false
+        "done": true
     },
     {
         "todo": "Javascript",
@@ -21,6 +21,10 @@
     },
     {
         "todo": "Laravel",
+        "done": false
+    },
+    {
+        "todo": "Axios",
         "done": false
     }
 ]

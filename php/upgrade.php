@@ -9,7 +9,19 @@ $upgradeTodo = [
     'done' => filter_var($_POST['upgradeTodo']['done'], FILTER_VALIDATE_BOOLEAN),
 ];
 
-$contentDecoded[] = $upgradeTodo;
+foreach($contentDecoded as $index => $todo){
+    if ($todo['todo'] == $upgradeTodo['todo']){
+        //$todo['done'] = !$todo['done'];
+        $contentDecoded[$index]['done'] = !$contentDecoded[$index]['done'];
+    };
+}
 
 file_put_contents('../database/database.json', json_encode($contentDecoded) );
-echo json_encode($upgradeTodo) ;
+
+$response = [
+    'success' => true,
+    'message' => 'Upgrade todo OK',
+    'code' => 200
+];
+
+echo json_encode($response) ;
