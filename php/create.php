@@ -1,4 +1,5 @@
 <?php
+// RICHIESTA DATABASE
 $contentDatabase =  file_get_contents('../database/database.json');
 $contentDecoded = json_decode($contentDatabase, true);
 

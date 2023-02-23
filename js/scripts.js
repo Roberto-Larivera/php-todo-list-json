@@ -38,6 +38,21 @@ createApp({
                     this.newTodoForm.textTodo = '';
                     this.getReadApi();
                 });
+        },
+        postUpgradeDone(item){
+            axios
+                .post(this.upgradeUrl, {
+                    reason: 'Upgrade done',
+                    upgradeTodo: item
+                },{
+                    headers:{
+                        'Content-Type': 'multipart/form-data',
+                    }
+                })
+                .then((response) => {
+                    console.log(response.data);
+                    this.getReadApi();
+                });
         }
     },
     created() {
