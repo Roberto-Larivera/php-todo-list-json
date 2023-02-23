@@ -48,4 +48,5 @@ if ($responseBol) {
 
 
 file_put_contents('../database/database.json', json_encode($contentDecoded));
+header('content-type: application/json');
 echo json_encode($response);

@@ -21,9 +21,13 @@ header h1{
 .card span{
     color: black;
 }
-.card span i{
+.card .list-group li .x_mark-my{
     color: black;
 }
-.card span i:hover {
-    color: #0d6efd;
+.card .list-group li .x_mark-my:hover {
+    color: #dc3545!important;
+}
+.card{
+    max-height: 50vh;
+    overflow: auto;
 }
