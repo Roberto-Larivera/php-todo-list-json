@@ -15,8 +15,16 @@ createApp({
         };
     },
     methods: {
+        getReadApi(){
+            axios
+            .get(this.readUrl)
+            .then((response) => {
+                this.listTodoApi = response.data.data;
+                console.log(response.data.data);
+                
+            });
+        },
         postCreateApi(){
-            console.log(this.newTodoForm);
             axios
                 .post(this.createUrl, {
                     newTodo: this.newTodoForm
@@ -26,19 +34,14 @@ createApp({
                     }
                 })
                 .then((response) => {
-                    console.log(response.data);
-                    
+                    console.log(response.data.data);
+                    this.newTodoForm.textTodo = '';
+                    this.getReadApi();
                 });
         }
     },
     created() {
-        axios
-            .get(this.readUrl)
-            .then((response) => {
-                this.listTodoApi = response.data.data;
-                console.log(response.data.data);
-                
-            });
+        this.getReadApi()
     },
     mounted() {
         console.log(this.listTodoApi);

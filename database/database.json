@@ -1,26 +1,26 @@
 [
     {
-        "todo" : "HTML",
-        "done" : true
+        "todo": "HTML",
+        "done": true
     },
     {
-        "todo" : "CSS",
-        "done" : true
+        "todo": "CSS",
+        "done": true
     },
     {
-        "todo" : "Responsive design",
-        "done" : false
+        "todo": "Responsive design",
+        "done": false
     },
     {
-        "todo" : "Javascript",
-        "done" : true
+        "todo": "Javascript",
+        "done": true
     },
     {
-        "todo" : "PHP",
-        "done" : false
+        "todo": "PHP",
+        "done": false
     },
     {
-        "todo" : "Laravel",
-        "done" : false
+        "todo": "Laravel",
+        "done": false
     }
 ]
