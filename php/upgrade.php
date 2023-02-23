@@ -20,9 +20,9 @@ if ($_POST['upgradeTodoIndex'] !== null && $contentDecoded[$upgradeTodoIndex]['t
 
     foreach ($contentDecoded as $index => $todo) {
         if ($todo['todo'] == $upgradeTodo['todo']) {
-            //$todo['done'] = !$todo['done'];
-            $contentDecoded[$index]['done'] = !$contentDecoded[$index]['done'];
             $todoUpgrade = $todo['todo'];
+            $todo['done'] = !$todo['done'];
+            //$contentDecoded[$index]['done'] = !$contentDecoded[$index]['done'];
             $responseBol = true;
 
             break;

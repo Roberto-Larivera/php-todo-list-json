@@ -2,6 +2,7 @@
 // RICHIESTA DATABASE
 $contentDatabase =  file_get_contents('../database/database.json');
 $contentDecode = json_decode($contentDatabase, true);
+$contentDecode = $contentDecode ?? null;
 $responseBol = false;
 
 $deleteTodoIndex = $_POST['deleteTodoIndex'] ?? null;
@@ -9,24 +10,29 @@ $deleteTodo = [
     'todo' => ($_POST['deleteTodo']['todo'] ?? null),
     'done' => filter_var(($_POST['deleteTodo']['done']), FILTER_VALIDATE_BOOLEAN),
 ];
-if ($deleteTodoIndex !== null && $contentDecode[$deleteTodoIndex]['todo'] == $deleteTodo['todo']) {
-    unset($contentDecode[$deleteTodoIndex]);
-    $contentDecode = array_values($contentDecode);
-    $todoDelete = $contentDecode[$deleteTodoIndex];
-    $responseBol = true;
-} else {
-
-    foreach ($contentDecode as $index => $todo) {
-        if ($todo['todo'] == $deleteTodo['todo']) {
-            unset($contentDecode[$index]);
-            $contentDecode = array_values($contentDecode);
-            $todoDelete = $todo;
-            $responseBol = true;
-
-            break;
-        } else {
-        };
+if($contentDecode !== null && $contentDecode != []){
+    if ($deleteTodoIndex !== null && $contentDecode[$deleteTodoIndex]['todo'] == $deleteTodo['todo']) {
+        $todoDelete = $contentDecode[$deleteTodoIndex];
+        unset($contentDecode[$deleteTodoIndex]);
+        $contentDecode = array_values($contentDecode);
+        $responseBol = true;
+    } else {
+    
+        foreach ($contentDecode as $index => $todo) {
+            if ($todo['todo'] == $deleteTodo['todo']) {
+                unset($todo);
+                $contentDecode = array_values($contentDecode);
+                $todoDelete = $todo;
+                $responseBol = true;
+    
+                break;
+            } else {
+            };
+        }
     }
+
+}else{
+    $messageError = 'Non-existent data';
 }
 
 if ($responseBol) {
@@ -39,7 +45,7 @@ if ($responseBol) {
 } else {
     $response = [
         'success' => true,
-        'message' => 'Error delete todo',
+        'message' => 'Error delete todo'. ' - '.$messageError?? 'Data not found',
         'code' => 400
     ];
 }
